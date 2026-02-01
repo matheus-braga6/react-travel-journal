@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Header Component */
+.header {
+  width: 100%;
+  height: 90px;
+  background-color: #F55A5A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.header__image {
+  width: 48px;
+  height: 48px;
+}
+
+.header__title {
+  font: 500 1.5rem / 1 'Inter', sans-serif;
+  color: #ffffff;
+  letter-spacing: -7.5%;
+}
+
+/* Entry Component */
+.entry {
+  width: 100%;
+  max-width: calc(100% - 80px);
+  margin-inline: auto;
+  padding-block: 45px 28px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.entry__card {
+  display: flex;
+  gap: 19px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #F5F5F5;
+}
+
+.entry__main-image-container {
+  width: 250px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.entry__main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entry__content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry__content-line {
+  display: flex;
+  align-items: center;
+}
+
+.entry__content-marker-icon {
+  width: 16px;
+  height: auto;
+  flex-shrink: 0;
+  margin-right: 6px;
+}
+
+.entry__content-marker-text {
+  font: 400 0.8rem / 1 'Inter', sans-serif;
+  color: #2B283A;
+  text-transform: uppercase;
+  letter-spacing: 0.17em;
+  margin-right: 12px;
+}
+
+.entry__content-link,
+.entry__content-link:hover {
+  font: 400 0.8rem / 1 'Inter', sans-serif;
+  color: #918E9B;
+  text-decoration: underline;
+}
+
+.entry__title {
+  font: 700 2rem / 1 'Inter', sans-serif;
+  color: #2B283A;
+}
+
+.entry__date {
+  font: 700 0.8rem / 1 'Inter', sans-serif;
+  color: #2B283A;
+  margin-top: 6px;
+}
+
+.entry__description {
+  font: 400 0.9rem / 1.5 'Inter', sans-serif;
+  color: #2B283A;
+}
+
+@media (max-width: 1200px) {
+  .entry {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .entry__main-image-container {
+    width: 200px;
+  }
+
+  .entry__title {
+    font-size: 1.8rem;
+  }
+
+  .entry__date,
+  .entry__description
+   {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .entry__card {
+    flex-direction: column;
+  }
+
+  .entry__main-image-container {
+    width: 100%;
+  }
+}
